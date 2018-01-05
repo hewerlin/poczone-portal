@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<title>POCZone.net</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<link rel="stylesheet" href="portalres/portal-style.css" />
+<script src="portalres/portal-bundled.js" charset="utf-8"></script>
+</head>
+
+<body onload="init()">
+
+<header>
+	<button onclick="goHome()" id="goHomeBtn"><img src="portalres/img/home.png" /></button>
+	<span id="title">POCZone.net</span>
+	<button onclick="logout()" id="logoutBtn"><img src="portalres/img/logout.png" /></button>
+</header>
+
+<div class="content">
+
+	<div id="outside">
+	
+		<div class="box quote">Create the things you wish existed!</div>
+
+		<form onsubmit="submitAuthForm('login', this); return false;">
+			<input type="text" name="username" value="" /><input type="password" name="password" value="" /><button autofocus="autofocus"><img src="portalres/img/login.png "/> Login</button>
+		</form>
+
+		<form onsubmit="submitAuthForm('login', this); return false;">
+			<input type="hidden" name="username" value="demo" /><input type="hidden" name="password" value="demo" /><button><img src="portalres/img/login.png "/> Demo-Login</button>
+		</form>
+	
+		<form onsubmit="submitAuthForm('register', this); return false;">
+			<input type="text" name="username" /><input type="password" name="password" /><button><img src="portalres/img/register.png "/> Register</button>
+		</form>
+		
+	
+		<div class="box">
+			I am currently rewriting this website...<br/>
+			<a href="https://medium.com/side-project-lovers-unite/poczone-0-rewriting-my-website-for-experimental-note-taking-apps-index-285470906c74" target="_blank">Follow me on the journey!</a><br/><br/>
+
+			<a href="https://poczone.net/backend/" target="_blank">Backend Service Interface</a> | <a href="https://github.com/poczone/">Code at Github</a>
+		</div>
+
+		<div style="padding:10px 0px; text-align:center;"><a href="https://hendrik.ewerlin.com/" target="_blank" style="overflow: hidden; display: inline-block; border-radius: 30px; text-decoration:none; font-family: Tahoma; font-size: 16pt; white-space:nowrap; background: linear-gradient(to bottom, #fff, #ddd); text-align:left; color:#048; padding-right: 10px;"><img src="https://hendrik.ewerlin.com/he64.jpg" style="width:64px; height:64px; vertical-align:middle;" /> Hendrik.Ewerlin.com</a></div>
+	</div>
+
+	<div id="inside">
+		<div id="spaceIndex"></div>
+		<div id="newSpace"></div>
+		<div id="editSpace"></div>
+	</div>
+			
+	<div id="inapp">
+		<div id="inappFrameholder"></div>
+	</div>
+	
+	<div id="busyOverlay"></div>
+</div>
+	
+</body>
+</html>

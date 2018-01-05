@@ -1,0 +1,1 @@
+browserify main.js -o ../portal-bundled.js
