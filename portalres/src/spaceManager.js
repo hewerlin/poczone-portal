@@ -15,7 +15,8 @@ var spaceManager = module.exports = {
 	createSpace: createSpace,
 	renameSpace: renameSpace,
 	shareSpace: shareSpace,
-	leaveSpace: leaveSpace
+	leaveSpace: leaveSpace,
+	collectCoupon: collectCoupon
 };
 
 function getSpaces() {
@@ -110,5 +111,14 @@ function leaveSpace(space) {
 			location.replace("#");
 			loadSpaces();
 		}
+	});
+}
+
+function collectCoupon(coupon) {
+	com.send("spaces/coupons/collect", {"sessionToken":"", "coupon": coupon}, function(result) {
+		if(result.success) {
+			loadSpaces();
+		}
+		location.replace("#");
 	});
 }

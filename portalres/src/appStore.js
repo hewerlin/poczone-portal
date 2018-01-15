@@ -6,13 +6,19 @@ var apps = [
 		id: "KANBAN",
 		name: "Kanban Bubbles",
 		info: "Simple Kanban Board to keep an overview",
-		baseURL: "apps/kanban-bubbles/"
+		baseURL: "https://poczone.net/apps/kanban-bubbles/"
 	}
 	,{
 		id: "GF",
 		name: "Gedanken-Fetzen",
 		info: "Undirected graph of text nodes, useful for quotes",
-		baseURL: "apps/gedanken-fetzen/"
+		baseURL: "https://poczone.net/apps/gedanken-fetzen/"
+	}
+	,{
+		id: "CON",
+		name: "Concepts",
+		info: "Nested lists (WORK IN PROGRESS!)",
+		baseURL: "https://poczone.net/apps/concepts/"
 	}
 	,{
 		id: "DEMO",
@@ -20,20 +26,6 @@ var apps = [
 		info: "Demo for the POCZone.net API concept",
 		baseURL: noop
 	}
-	/*
-	,{
-		id: "DONE",
-		name: "Done",
-		info: "ToDo-List with nested entries" + nyiHint,
-		baseURL: noop
-	}
-	,{
-		id: "DIARY",
-		name: "Diary",
-		info: "Diary application with tagged notes" + nyiHint,
-		baseURL: noop
-	}
-	*/
 ];
 
 var appStore = module.exports = {

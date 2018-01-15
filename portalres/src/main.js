@@ -82,6 +82,10 @@ function updateDisplay() {
 			if(app != null) {
 				showAppSpaceCreator(app);
 			}
+		}  else if(hash.substring(0,7) == "coupon:") {
+			var coupon = hash.split(":")[1];
+			spaceManager.collectCoupon(coupon);
+			showSpaceIndex();
 		} else {			
 			var space = spaceManager.resolveSpace(hash);
 			if(space != null) {
